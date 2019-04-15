@@ -1,5 +1,5 @@
-var xlsx = require('node-xlsx');
-var fs = require('fs');
+const xlsx = require('node-xlsx');
+const fs = require('fs');
 
 var now = new Date();
 var year = now.getFullYear();
