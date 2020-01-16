@@ -1,4 +1,4 @@
 e:
-start node E:\study\test\node\±£´æ¹Ø»úÊ±¼ä\Stream.js
+start node E:\study\test\node\ï¿½ï¿½ï¿½ï¿½Ø»ï¿½Ê±ï¿½ï¿½\Stream.js
 timeout 5
 

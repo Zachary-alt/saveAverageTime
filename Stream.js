@@ -1,10 +1,10 @@
 const xlsx = require('node-xlsx');
 const fs = require('fs');
 
-var now = new Date();
-var year = now.getFullYear();
-var month = now.getMonth()+1;
-var week = "周"+now.getDay();
+const now = new Date();
+const year = now.getFullYear();
+const month = now.getMonth()+1;
+const week = "周"+now.getDay();
 
 const timeDetail = formatTime(now);
 const timeDate = formatDate(now);
@@ -12,8 +12,8 @@ const timeDate = formatDate(now);
 const fileName = `${year}年下班时间统计`;
 const sheetName = year+'年'+month+'月';
 
-var data;
-var preData=null;
+let data;
+let preData=null;
 let index=-1;
 try{
 	preData = xlsx.parse(`./${fileName}.xlsx`);
@@ -91,12 +91,12 @@ data[sheetIndex].data.push([]);
 data[sheetIndex].data.push(['平均下班时间：',averageTime]);
 
 // 写xlsx
-var buffer = xlsx.build(data);
+let buffer = xlsx.build(data);
 fs.writeFile(`./${fileName}.xlsx`, buffer, function (err)
 {
     if (err){
 		// 创建一个可以写入的流，写入到文件 output.txt 中
-		var writerStream = fs.createWriteStream('./output.txt');
+		let writerStream = fs.createWriteStream('./output.txt');
 		// 使用 utf8 编码写入数据
 		writerStream.write(err,'UTF8');
 		writerStream.end();
